@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { getAssets } from "~/src/model/constant";
 interface News {
   date: number[];
   title: string;
@@ -27,6 +28,8 @@ const newsList: News[] = [
     title: "動画を新たに1つ追加し、adobeの項目を制作しました",
   },
 ];
+
+const logo = getAssets("img/logo.png");
 </script>
 
 <template>
@@ -41,6 +44,7 @@ const newsList: News[] = [
       </p>
     </div>
   </div>
+  <img :src="logo" height="300px" />
 </template>
 
 <style scoped lang="scss">
